@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header,.information{
+    display: flex;
+    padding: 50px 70px;
+    background-color: #1f2937;
+    color: white;
+}
+.information{
+    display: flex;
+    flex: 1;
+}
+.header .headerLogo{
+    flex:1;
+}
+button{
+    background-color: #3882f6;
+    height: 25px;
+    width: 50px;
+    border-radius: 8px;
+}
+.information .description{
+    margin-right: 50px;
+}
+.header .headerLink{
+    color: E5E7EB;
+    font-size: 18px;
+}
+*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    background-color: #1f2937;
+}
+.container .header{
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    color: ;
+
+
+      
+}
+.container .information{
+    display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+.container .header .headerLogo{
+    border: 2px;
+    border-color: orange;
+    flex: 1;
+    color: #f9faf8;
+    font-weight: 24px;
+}
+.container .header .headerLink{
+    color: #E5E7EB;
+    margin-left: 10px;
+    font-weight: 18px;
+    border: 2px;
+
+}
+.container .information .description{
+    border: 2px;
+    border-color: blue;
+    flex: 1;
+    
+}
+.container .information .description h1{
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight:bolder ;
+}
+.container .information .description p,button{
+    color: #f9faf8;
+    font-size: 18px;
+}
+.container .information .description button{
+    padding: 10px;
+    background-color: #3882f6;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #f9faf8;
+}
+img{
+    height: 170px;
+    width: 480px;
+} 
