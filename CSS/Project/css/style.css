@@ -99,3 +99,29 @@ img{
     height: 170px;
     width: 480px;
 } 
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.container2 .design{
+    display: flex;
+}
+.container2 .design .box {
+
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+    border: 5px;
+}
+.container2 .design .box img{
+    height: 150px;
+    width: 150px;
+    border: 5px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #3882f6;
+}
+
