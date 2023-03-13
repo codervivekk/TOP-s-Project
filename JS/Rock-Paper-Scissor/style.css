@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 .container{
     display: flex;
@@ -13,3 +12,15 @@
     color: azure;
     background-color: red;
 }
+.gameContainer{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    background-color: aqua;
+}
+.gameContainer > .btnContainer > button{
+    font-size: 18px;
+    color: white;
+    background-color: black;
+}
+

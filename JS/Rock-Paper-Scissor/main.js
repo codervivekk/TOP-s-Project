@@ -1,6 +1,6 @@
 // The complete program has been written with a minor mistake where computer is returning only "rock"
 
-const button = document.getElementsByClassName("button");
+const buttons = document.querySelectorAll('button');
 
 function getComputerChoice(){
     const shapes=[
@@ -26,51 +26,59 @@ function playRound(computerSelection,playerSelection){
     }
 }
 
+function finalResult(result){
+    if(result==5){
+
+        if(player>=3){
+            alert("You Won the Game!");
+        }
+        else if(computer>=3){
+            alert("You lost the Game!");
+        }
+        else{
+            alert("Game Drawn!");
+        }
+        console.log("The Game is over!");
+        round=0;
+    }
+}
+
 let player=0,computer=0,draw=0;
 
-for(let i=0;i<5;i++){
-
-    console.log(`Round ${i+1}`);
-
     let computerSelection = getComputerChoice();
-
-    console.log(computerSelection);
     computerSelection = computerSelection.toUpperCase();
 
-    for (i of button) {
-        i.addEventListener("click", function(e) {
-         var playerSelection = e.srcElement.value; 
-         console.log(playerSelection);
-        })
-        break;
-    };
+    let round=0;
+    buttons.forEach((button) => {
+    button.addEventListener('click',()=>{
+        let playerSelection = button.value;
+        playerSelection=playerSelection.toUpperCase();
+        console.log(`Round ${++round}`);
+        console.log(computerSelection);
+        console.log(playerSelection);
+        let winner=playRound(computerSelection,playerSelection);
+
+
+        if(winner == "Player"){
+            console.log("You win!");
+            player++;
+        }
+        else if(winner == "Computer"){
+            console.log("You loose!");
+            computer++;
+        }
+        else{
+            console.log("Game draw!");
+            draw++;
+        }
+
+        finalResult(round);        
+    });
+});
+       
+
+    
+
 
 
     
-    console.log(playerSelection);
-    playerSelection = playerSelection.toUpperCase();
-
-
-    if(playRound(computerSelection,playerSelection) == "Player"){
-        console.log("You win!");
-        player++;
-    }
-    else if(playRound(computerSelection,playerSelection) == "Computer"){
-        console.log("You loose!");
-        computer++;
-    }
-    else{
-        console.log("Game draw!");
-        draw++;
-    }
-}
-
-if(player>=3){
-    alert("You Won the Game!");
-}
-else if(computer>=3){
-    alert("You lost the Game!");
-}
-else{
-    alert("Game Drawn!");
-}
