@@ -1,7 +1,7 @@
 // The complete program has been written with a minor mistake where computer is returning only "rock"
 
 const buttons = document.querySelectorAll('button');
-
+const p=document.getElementsByTagName('p');
 function getComputerChoice(){
     const shapes=[
         "rock",
